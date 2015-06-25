@@ -1,20 +1,23 @@
 $(document).ready(function() {	
 
-	$("#titulo").on('click',function() {
+	$("#validador").on('click',function() {
+		// elimina el dialogo anterior (si existe) para no mandarlo a validar		
+		$('#dialog').remove();
+		
+		// crea el iframe al final del body
+		var html = 'https://validator.w3.org/check?fragment='+escape('<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//ES">'+"<html>"+$('html').html()+"</html>");
+		$('body').append('<div id="dialog"><iframe width="99%" height="97%" src="'+html+'"></iframe></div>');
+		
+		// levanta el iframe como dialogo
+		$('#dialog').dialog({
+			title: 'Informe de Accesibilidad',
+			width: 800,
+			height: 500,
+			resizable: false
 
-		var html = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//ES">'+"<html>"+$('html').html()+"</html>";
-
-				
-		$.ajax({
-		  type: "GET",
-		  url: "https://validator.w3.org/check",
-		  data: {fragment:html},
-		  
-		  success: function(data,textStatus,jqXHR){
-		  	console.log(jqXHR);
-		  }
 		});
-
+		
+		
 	})
 
 })
