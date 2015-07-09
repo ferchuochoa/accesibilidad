@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//ES">
+<html>
+	<head>
+    <link type="text/css" rel="stylesheet" href="stylePaginaWeb.css">
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/validator.js"></script>
+    <link rel="stylesheet" href="libs/jquery-ui-1.11.4/jquery-ui.min.css">
+    <script type="text/javascript" src="libs/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+    <title>Aprende lenguaje de signos argentino LSA accesible</title>
+	</head>
+	<body>
+		<h1>Contactate con nosotros!!</h1>
+		<div>
+			<!-- Menu de navegacion del sitio -->
+			<ul class="navbar">
+  				<li><a href="paginaWebAccesible.html" title="Pagina principal">Pagina principal</a></li>
+  				<li><a href="contenidos.html" title="Contenidos Conceptuales">Contenidos</a></li>
+  				<li><a href="materiales.html" title="Materiales">Materiales</a></li>
+  				<li><a href="objetivos.html" title="Objetivos">Objetivos</a></li>
+  				<li><a href="contacto.html" title="Contactos">Contactos</a></li>
+			</ul>
+		</div>
+		<form id="contacto" action="None" class="contacto">
+            <div>
+            	<p class="ayuda">Ingrese su nombre</p>
+            	<label>Tu Nombre:</label><input type='text' value='nombre'</div>
+            <div>
+            	<p class="ayuda">Ingrese su mail, es obligatorio para poder comunicarnos con usted</p>
+            	<span class="requerido">*</span>
+            	<label>Tu Email:</label><input type='text' value='ejemplo@direccion.com'></div>
+            <div>
+            	<label>Asunto:</label><input type='text' value='escriba el asunto'></div>
+            <div>
+            	<p class="ayuda">Ingrese su consulta o mensaje, es obligatorio para poder saber sobre su inquietud</p>
+            	<span class="requerido">*</span>
+            	<label>Mensaje:</label><textarea rows='6' cols='4' name='mensaje'>Aqui ingrese su mensaje</textarea></div>
+            <div><input type='submit' value='Envia Mensaje'></div>
+        </form>
+    <input type="button" value="Validar pagina" id="validador"> 
+
+	</body>
+</html> 
